@@ -142,10 +142,9 @@ packages     = [ 'sleekxmpp',
                  'sleekxmpp/thirdparty',
                  ]
 
-python_version = sys.version_info
 python_requirements = ['pyasn1', 'pyasn1_modules']
 
-if python_version(0) == 3:
+if sys.version_info.major == 3:
     python_requirements.append('dnspython3')
 else:
     python_requirements.append('dnspython')
